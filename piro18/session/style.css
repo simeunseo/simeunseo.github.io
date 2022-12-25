@@ -1,0 +1,90 @@
+@import "reset.css";
+@font-face {
+  font-family: "HSSaemaul-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSSaemaul-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "HSSaemaul-Regular";
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  background-color: black;
+  color: darkolivegreen;
+}
+
+#background {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://t1.daumcdn.net/cfile/tistory/2776604F56661E1E2D");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+main h1 {
+  color: white;
+}
+main i {
+  padding: 0 10px;
+}
+
+#countdown ol {
+  display: flex;
+}
+
+ol {
+  margin-top: 70px;
+}
+
+ul {
+  margin-top: 55px;
+}
+
+.boxes {
+  margin: 0px 10px;
+  font-size: 24px;
+  background-color: white;
+  padding: 36px;
+  border-radius: 40px;
+}
+
+.boxes:hover {
+  background-color: darkolivegreen;
+  color: white;
+}
+
+.boxes span {
+  display: block;
+  font-size: 72px;
+}
+
+#goals {
+  background: white;
+  padding: 50px 60px;
+  border-radius: 40px;
+}
+
+#goals li {
+  font-size: 24px;
+  padding: 10px 0;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-underline-offset: 10px;
+  text-decoration-color: darkorange;
+}
+
+#goals i {
+  padding-right: 10px;
+  color: darkorange;
+}
