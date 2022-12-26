@@ -33,7 +33,7 @@ body {
   background-image: url("https://static.vecteezy.com/system/resources/previews/008/043/923/non_2x/fireworks-on-blue-night-background-free-vector.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  color: darkolivegreen;
+  color: darkgoldenrod;
   font-family: "HSSaemaul-Regular";
 }
 
@@ -85,12 +85,12 @@ h1 {
   text-decoration-line: underline;
   text-decoration-style: wavy;
   text-underline-offset: 10px;
-  text-decoration-color: darkorange;
+  text-decoration-color: olive;
 }
 
 #goals i {
   margin-right: 10px;
-  color: darkorange;
+  color: olive;
 }
 
 #goals ul {
