@@ -1,0 +1,252 @@
+/* reset.css */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* global setting */
+:root {
+  --grey--color: rgb(201, 201, 201);
+  --red--color: rgb(255, 86, 86);
+  --green--color: rgb(103, 190, 93);
+  --yellow--color: rgb(249, 210, 72);
+  --blue--color: rgb(85, 133, 236);
+}
+
+html {
+  background-color: var(--grey--color);
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  background-color: white;
+  width: 480px;
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+i,
+.calendar__todo-num,
+footer > div {
+  cursor: pointer;
+}
+
+/* font setting */
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TTTogether";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/TTTogetherA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Pretendard-Regular";
+}
+
+h1 {
+  font-family: "TTTogether";
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+/* header */
+header {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+/* calendar */
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  position: relative;
+  margin-bottom: 3rem;
+  border: 1px solid var(--grey--color);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0rem 0.7rem 0.1rem var(--grey--color);
+  color: var(--grey--color);
+}
+
+#calendar i {
+  font-size: 2rem;
+}
+
+#calendar > li {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+}
+
+.calendar__todo-num {
+  position: relative;
+}
+
+.calendar__todo-num > small {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.fa-heart {
+  color: var(--grey--color);
+}
+
+.selected {
+  color: rgb(0, 0, 0);
+}
+
+/* todo */
+#todo {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.todo__categories {
+  margin: 1rem 0;
+}
+
+.todo__categories__title {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  border-radius: 2rem;
+  padding: 0.5rem 0.8rem;
+  color: white;
+  border: 1px solid var(--grey--color);
+  background-color: var(--grey--color); /* default color */
+  box-shadow: 0rem 0.5rem 0.1rem var(--grey--color);
+}
+
+.bg-red {
+  background-color: var(--red--color);
+}
+
+.bg-green {
+  background-color: var(--green--color);
+}
+
+.bg-yellow {
+  background-color: var(--yellow--color);
+}
+
+.bg-blue {
+  background-color: var(--blue--color);
+}
+
+.todo__categories__title > i {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+
+.todo__categories__content {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 2rem 1rem 1rem;
+}
+
+.todo__categories__content > li {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 0.8rem;
+  align-items: center;
+}
+
+.todo__categories__content i {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.todo__categories__content i:hover,
+.todo__categories__content i:focus {
+  color: black;
+}
+
+/* footer */
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+footer > div {
+  padding: 1rem;
+  margin: 0 0.5rem;
+  text-align: center;
+  border: 1px solid var(--grey--color);
+  border-radius: 1rem;
+  box-shadow: 0rem 0.7rem 0.1rem var(--grey--color);
+}
+
+footer i {
+  margin-bottom: 0.5rem;
+}
