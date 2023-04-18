@@ -33,5 +33,5 @@ form.addEventListener("submit", (e) => {
 
   localStorage.setItem("item_data", JSON.stringify(localStorageData));
 
-  location.replace("../");
+  location.replace("../home");
 });
