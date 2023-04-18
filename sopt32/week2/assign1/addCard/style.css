@@ -1,0 +1,231 @@
+@import url("../common/reset.css");
+
+/* CSS 전역 변수 선언 */
+:root {
+  --main-color: rgb(141, 19, 19);
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0.2;
+    transform: translateY(20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0.2;
+    transform: translateX(20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+/* font setting */
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "EBSHunminjeongeumSBA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/EBSHunminjeongeum.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Pretendard-Regular", sans-serif;
+}
+
+h1 {
+  font-family: EBSHunminjeongeumSBA;
+  font-size: 2rem;
+}
+h2 {
+  font-family: EBSHunminjeongeumSBA;
+  font-size: 1.8rem;
+}
+h3,
+nav > a {
+  font-size: 1.3rem;
+}
+small {
+  font-size: 0.8rem;
+}
+
+/* header */
+header > a {
+  color: white;
+}
+header {
+  padding: 2rem;
+  width: -webkit-fill-available;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+
+  background-color: var(--main-color);
+  color: white;
+}
+
+#header__menu {
+  display: none;
+  box-shadow: -1rem 0 1rem var(--shadow-color);
+  animation: fadeInRight 0.7s;
+}
+
+#header__button {
+  width: 2rem;
+  height: 2rem;
+}
+
+#header__button i {
+  color: white;
+  font-size: 1.2rem;
+}
+
+#header__button:hover + #header__menu,
+#header__menu:hover {
+  display: block;
+}
+
+#header__menu {
+  background-color: white;
+  color: black;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 2rem;
+  width: 10rem;
+}
+
+#header__menu > h1 {
+  padding-bottom: 2rem;
+  font-weight: bold;
+}
+
+#header__menu__list {
+  display: flex;
+  flex-direction: column;
+}
+
+#header__menu a {
+  color: black;
+  padding-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+#header__menu a:hover {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: var(--main-color);
+  text-underline-offset: 0.3rem;
+}
+
+/* main */
+
+main {
+  padding-top: 8rem;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  padding: 1rem 0;
+}
+
+/* form */
+
+.form-container {
+  background-color: white;
+  color: black;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 3rem;
+  margin: 2rem 6rem;
+
+  border-radius: 1rem;
+
+  animation: fadeInUp 1s;
+}
+
+form {
+  width: 35vw;
+}
+
+form > span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+}
+
+span > label {
+  margin-right: 1rem;
+}
+
+form input[type="file"] {
+  width: 10rem;
+}
+
+form > button {
+  background-color: var(--main-color);
+  color: white;
+
+  border-radius: 1rem;
+
+  padding: 1rem 0;
+  margin-top: 2rem;
+
+  width: 100%;
+}
+
+form > button > h2 {
+  font-size: 1.3rem;
+}
+
+form > button:hover {
+  background-color: black;
+  transition-duration: 0.3s;
+}
+
+form > hr {
+  margin: 1rem 0;
+  border: 0.01rem solid var(--shadow-color);
+}
+
+#image-thumbnail {
+  width: 14rem;
+}
+
+input,
+select {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid var(--shadow-color);
+}

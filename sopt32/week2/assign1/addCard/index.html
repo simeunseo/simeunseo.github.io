@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✠ 마라명가 ✠ : 새 상품 추가</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../home"><h1>✠ 마라명가 ✠</h1></a>
+      <button type="button" id="header__button">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav id="header__menu">
+        <h1>메뉴</h1>
+        <div id="header__menu__list">
+          <a href="../home">홈</a>
+          <a href="./">새 상품 추가</a>
+          <a href="#">찜 목록</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="heading">
+        <h1>당신이 원하는 그 어떤 재료도</h1>
+        <h1>마라명가에서는 가능합니다.</h1>
+      </section>
+      <section class="form-container">
+        <form id="add-card-form" method="post" enctype="multipart/form-data">
+          <span>
+            <label for="name"><h4>재료 이름</h4></label>
+            <input required type="text" name="name" id="name" />
+          </span>
+          <hr />
+          <span>
+            <label for="hashtag"><h4>해시태그</h4></label>
+            <input
+              required
+              placeholder="쉼표(,)로 구분"
+              type="text"
+              name="hashtag"
+              id="hashtag"
+            />
+          </span>
+          <hr />
+          <span>
+            <div class="button">
+              <label for="image"><h4>이미지 선택</h4></label>
+            </div>
+            <input
+              required
+              type="file"
+              id="image"
+              name="image"
+              accept="image/*"
+            />
+          </span>
+          <hr />
+          <span>
+            <label><h4>이미지 미리보기</h4></label>
+            <img
+              src="https://skg1891.cafe24.com/wp-content/uploads/2013/11/dummy-image-portrait.jpg"
+              id="image-thumbnail"
+            />
+          </span>
+          <hr />
+          <span>
+            <label for="cateogry"><h4>카테고리</h4></label>
+            <select required name="category">
+              <option value="">=== 선택 ===</option>
+              <option value="veg">채소</option>
+              <option value="mush">버섯</option>
+              <option value="tofu">두부</option>
+              <option value="etc">기타</option>
+            </select>
+          </span>
+          <button type="submit"><h2>재료 추가</h2></button>
+        </form>
+      </section>
+    </main>
+    <script
+      src="https://kit.fontawesome.com/6fbcf91afd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer type="module" src="./script.js"></script>
+  </body>
+</html>

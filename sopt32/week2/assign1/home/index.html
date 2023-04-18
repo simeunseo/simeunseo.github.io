@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✠ 마라명가 ✠</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="./"><h1>✠ 마라명가 ✠</h1></a>
+      <button type="button" id="header__button">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav id="header__menu">
+        <h1>메뉴</h1>
+        <div id="header__menu__list">
+          <a href="./">홈</a>
+          <a href="../addCard/">새 상품 추가</a>
+          <a href="#">찜 목록</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <nav>
+        <h2>분류</h2>
+        <ul>
+          <li>
+            <input class="main__nav__checkbox" type="checkbox" id="check-all" />
+            <label for="check-all">전체</label>
+          </li>
+          <li>
+            <input class="main__nav__checkbox" type="checkbox" id="check-veg" />
+            <label for="check-veg">채소</label>
+          </li>
+          <li>
+            <input
+              class="main__nav__checkbox"
+              type="checkbox"
+              id="check-mush"
+            />
+            <label for="check-mush">버섯</label>
+          </li>
+          <li>
+            <input
+              class="main__nav__checkbox"
+              type="checkbox"
+              id="check-tofu"
+            />
+            <label for="check-tofu">두부</label>
+          </li>
+          <li>
+            <input class="main__nav__checkbox" type="checkbox" id="check-etc" />
+            <label for="check-etc">기타</label>
+          </li>
+        </ul>
+      </nav>
+      <div class="container">
+        <section id="category-tags__box"></section>
+        <section id="cards"></section>
+      </div>
+    </main>
+    <template id="cards__template">
+      <article class="cards__card">
+        <div class="cards__card__modal">
+          <div class="cards__card__modal__tags">
+            <button class="tag__close-btn" type="button">
+              <i class="fa-solid fa-x"></i></button
+            >{modal_tags}
+          </div>
+        </div>
+        <h3>{item_name}</h3>
+        <div class="cards__card__tags__container">
+          <div class="cards__card__tags">{tags}</div>
+          <button class="tags__plus-btn" type="button">
+            <i class="fa-solid fa-circle-plus"></i>
+          </button>
+        </div>
+        <img alt="{img_alt}" src="{img_src}" />
+        <i class="fa-solid fa-heart"></i>
+      </article>
+    </template>
+    <template id="category-tags__template">
+      <span class="category-tag" id="{category-tag_id}"
+        >{category_name}<label for="{checkbox_id}">
+          <i class="fa-solid fa-circle-xmark"></i></label
+      ></span>
+    </template>
+    <script
+      src="https://kit.fontawesome.com/6fbcf91afd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer type="module" src="./script.js"></script>
+  </body>
+</html>
