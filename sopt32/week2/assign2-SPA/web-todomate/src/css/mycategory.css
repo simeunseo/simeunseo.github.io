@@ -1,0 +1,54 @@
+@import url("./base.css");
+
+#mycategory-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 34rem;
+  height: 100vh;
+}
+
+main > h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#order-change__section {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+
+  margin-bottom: 3rem;
+  padding: 1rem;
+
+  border: 0.1rem solid var(--grey--color);
+  border-radius: 1rem;
+
+  box-shadow: 0rem 0.7rem 0.1rem var(--grey--color);
+  color: var(--grey--color);
+}
+
+.todo__categories__title {
+  cursor: pointer;
+}
+
+.bounce:hover {
+  animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-1.2rem);
+  }
+  60% {
+    transform: translateY(-0.7rem);
+  }
+}
