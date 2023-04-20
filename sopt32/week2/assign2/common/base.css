@@ -183,3 +183,8 @@ footer i {
 .bg-blue {
   background-color: var(--blue--color);
 }
+
+button[type="submit"] {
+  cursor: pointer;
+  background-color: var(--grey--color);
+}

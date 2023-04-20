@@ -180,4 +180,5 @@ footer i {
 
 button[type="submit"] {
   cursor: pointer;
+  background-color: var(--grey--color);
 }
