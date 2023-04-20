@@ -160,3 +160,8 @@ i[done="true"],
   background-color: black;
   color: white;
 }
+
+button[type="submit"] {
+  cursor: pointer;
+  background-color: var(--grey--color);
+}
