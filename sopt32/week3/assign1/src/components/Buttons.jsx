@@ -1,10 +1,10 @@
 import { LevelContext, LevelDispatchContext } from "../context/context";
 
+import { GetCardArr } from "../utils/GetCardArr";
 import ModalPortal from "./ModalPortal";
 import { ScoreContext } from "../context/context";
 import { ScoreDispatchContext } from "../context/context";
 import SuccessModal from "./SuccessModal";
-import { getCardArr } from "../utils/GetCardArr";
 import styled from "styled-components";
 import usdDidMountEffet from "../hooks/useDidMountEffect";
 import { useContext } from "react";
@@ -26,7 +26,7 @@ const Button = (props) => {
         scoreDispatch({ type: "INITIALIZE" }); // 점수 초기화
         // 카드가 뒤집어지는 잠깐의 시간동안 새로 달라진 카드가 노출되지 않게 하기 위해, 카드 목록이 바뀔 때까지 약간의 딜레이를 준다.
         setTimeout(() => {
-          setCardAllList(getCardArr(levelType));
+          setCardAllList(GetCardArr(levelType));
         }, 800);
       }}
       type="button"

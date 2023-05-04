@@ -71,7 +71,7 @@ const shuffle = (array) => {
   }
 };
 
-const getCardArr = (level) => {
+const GetCardArr = (level) => {
   let randomIdxArr = [];
   let totalLength = allImageArr.length;
   switch (level) {
@@ -89,4 +89,4 @@ const getCardArr = (level) => {
       return randomIdxArr;
   }
 };
-export default getCardArr;
+export default GetCardArr;
