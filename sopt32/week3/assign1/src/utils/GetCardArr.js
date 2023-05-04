@@ -17,7 +17,7 @@ import img_7 from "../assets/cardImages/7_shin_hip.gif";
 import img_8 from "../assets/cardImages/8_shin_bike.gif";
 import img_9 from "../assets/cardImages/9_shin_spell.gif";
 
-export const allImageArr = [
+const allImageArr = [
   img_1,
   img_2,
   img_3,
@@ -71,7 +71,7 @@ const shuffle = (array) => {
   }
 };
 
-export const GetCardArr = (level) => {
+const GetCardArr = (level) => {
   let randomIdxArr = [];
   let totalLength = allImageArr.length;
   console.log("hi");
@@ -90,3 +90,5 @@ export const GetCardArr = (level) => {
       return randomIdxArr;
   }
 };
+
+export { allImageArr, GetCardArr };
