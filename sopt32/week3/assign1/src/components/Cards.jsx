@@ -2,7 +2,7 @@ import { LevelContext, ScoreDispatchContext } from "../context/context";
 import { useContext, useMemo } from "react";
 
 import Card from "./Card";
-import GetCardArr from "../utils/GetCardArr";
+import GetCardArr from "../utils/GetCardArr.js";
 import styled from "styled-components";
 import { useEffect } from "react";
 
