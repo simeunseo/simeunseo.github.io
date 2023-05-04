@@ -74,6 +74,7 @@ const shuffle = (array) => {
 export const GetCardArr = (level) => {
   let randomIdxArr = [];
   let totalLength = allImageArr.length;
+  console.log("hi");
   switch (level) {
     case "easy":
       randomIdxArr = makeCardDeck(getRandomIdx(totalLength, 5));
